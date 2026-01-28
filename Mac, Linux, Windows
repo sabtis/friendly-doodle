@@ -1,0 +1,34 @@
+# Baixa o boilerplate
+git clone https://github.com/sabtis/nextjs-boilerplate.git
+cd nextjs-boilerplate
+
+# Copia para uma nova pasta e remove histórico git
+cd ..
+cp -r nextjs-boilerplate friendly-doodle
+cd friendly-doodle
+rm -rf .git
+
+# Inicia o novo repositório e envia para o GitHub
+git init
+git add .
+git commit -m "chore: initial import for friendly-doodle"
+git branch -M main
+git remote add origin https://github.com/sabtis/friendly-doodle.git
+git push -u origin main
+# Baixa o boilerplate
+git clone https://github.com/sabtis/nextjs-boilerplate.git
+cd nextjs-boilerplate
+
+# Copia para nova pasta e remove histórico
+cd ..
+Copy-Item -Recurse nextjs-boilerplate friendly-doodle
+cd friendly-doodle
+Remove-Item -Recurse -Force .git
+
+# Inicia o novo repositório e envia para o GitHub
+git init
+git add .
+git commit -m "chore: initial import for friendly-doodle"
+git branch -M main
+git remote add origin https://github.com/sabtis/friendly-doodle.git
+git push -u origin main
